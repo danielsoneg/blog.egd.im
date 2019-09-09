@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content_header %}
+<h1>All Articles</h1>
+{% endblock %}
+{% block content %}
+<section id="post-list">
+    {% for article in articles_page.object_list %}
+    <article>
+        <header>
+        <h1><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="{{ article.title|striptags }}">{{ article.title }}</a></h1>
+        <h2>
+            by {% if article.author %}{{ article.author }}{% else %}Eric{% endif %}, 
+                <time class="published" datetime="{{ article.date.isoformat() }}">
+            {{ article.date|strftime("%b %d, %Y") }}
+            </time>
+            {% if article.modified %}
+            <time class="modified" datetime="{{ article.modified.isoformat() }}">
+            (Edited {{ article.modified|strftime("%b %d, %Y") }})
+            </time>
+            {% endif %}
+        </h2>
+        </header>
+        <section id="summary">
+        {{ article.summary }}
+        </section>
+    </article></li>
+    {% endfor %}
+{% if articles_page.has_other_pages() %}
+    {% include 'pagination.html' %}
+{% endif %}
+</section>
+{% endblock content %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block head %}
+  {{ super() }}
+  {% if article.description %}
+    <meta name="description" content="{{article.description}}" />
+  {% endif %}
+{% endblock %}
+
+{% block content_header %}
+    <h1><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="{{ article.title|striptags }}">{{ article.title }}</a></h1>
+	<section id="summary">
+		{% if article.summary %}{{ article.summary }}{% endif %}
+		By {% if article.author %}{{ article.author }}{% else %}Eric{% endif %}, 
+		<time class="published" datetime="{{ article.date.isoformat() }}">
+		{{ article.date|strftime("%b %d, %Y") }}
+		</time>
+		{% if article.modified %}
+		<time class="modified" datetime="{{ article.modified.isoformat() }}">
+		(Edited {{ article.modified|strftime("%b %d, %Y") }})
+		</time>
+		{% endif %}
+	</section>
+{% endblock %}
+{% block content %}
+	{{ article.content }}
+{% endblock %}

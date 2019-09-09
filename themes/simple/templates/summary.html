@@ -1,0 +1,13 @@
+    <h1><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="{{ article.title|striptags }}">{{ article.title }}</a></h1>
+	<section id="summary">
+		{% if article.summary %}{{ article.summary }}{% endif %}
+		<time class="published" datetime="{{ article.date.isoformat() }}">
+		{{ article.date|strftime("%b %d, %Y") }}
+		</time>
+		{% if article.modified %}
+		<time class="modified" datetime="{{ article.modified.isoformat() }}">
+		&nbsp;(Edited {{ article.modified|strftime("%b %d, %Y") }})
+		</time>
+		{% endif %}
+	</section>
+	
