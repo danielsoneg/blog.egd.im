@@ -1,6 +1,9 @@
 Title: About this Site
 Date: 2019-09-10
+Modified: 2019-10-21
 Summary: The hardware, software, design, and philosophy powering this site.
+
+**Update:** *[The Pi is now solar powered!](/a-solar-powered-raspberry-pi-part-1.html)*
 
 I'm taking time now to explore and think about the world, and I wanted a place to write and share what I'm doing. A normal person would get a Medium account and call it a day, but I've got a lot of time on my hands, so I took the chance to experiment and see if I could make something interesting.
 
