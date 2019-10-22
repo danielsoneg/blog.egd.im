@@ -1,5 +1,6 @@
 /* Main page design */
 :root {
+	--width: 32em;
 	--background: #FFF;
 	--background-offset: #FAFAFA;
 	--text-color: #000;
@@ -23,13 +24,19 @@
 }
 
 body {
-	max-width: 32em;
-    background-color: var(--background);
+	max-width: var(--width);
+	background-color: var(--background);
 	color: var(--text-color);
 	margin: 0 auto;
 	padding: 1em;
 	font-family: Georgia, serif;
 	font-size: 1.2em;
+}
+
+article img {
+	display:block;
+	max-width: var(--width);
+	padding: .5em;
 }
 
 h1, h2, h3 {
