@@ -1,6 +1,7 @@
 Title: Brief Notes on an Oil War
 Date: 2020-03-09
 Summary: What the Saudis and Russians are doing and why your 401k hates it.
+Tweet: https://twitter.com/egd/status/1237162438237147136
 
 *Now that my travel plans are shot, I thought I'd do a bit more writing - but where to begin? I don't feel like I have a handle on the Coronavirus, and frankly writing anything coherent about politics in this moment would take more space than my poor raspberry pi has to offer. I woke up today to the markets crashing, though not for any of the reasons I'd have expected - instead, it's just a good old bit of straight line geopolitics. That, THAT I can get a handle on.*
 
