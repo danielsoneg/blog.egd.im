@@ -3,7 +3,7 @@
 <html lang="{{ DEFAULT_LANG }}">
     <head>
         {% block head %}
-        <title>{% block title %}{{ SITENAME }} → BLOG{% endblock title %}</title>
+      <title>{% block title %}{{ SITENAME }} → BLOG{% endblock title %}</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
@@ -13,7 +13,6 @@
         {% if FEED_RSS %}<link href="{{ FEED_DOMAIN }}/{% if FEED_RSS_URL %}{{ FEED_RSS_URL }}{% else %}{{ FEED_RSS }}{% endif %}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />{% endif %}
         {% endblock head %}
     </head>
-
     <body>
         <nav><a href="{{ SITEURL }}/">{{ SITENAME }} → BLOG</a></nav>
         <header class="body">
