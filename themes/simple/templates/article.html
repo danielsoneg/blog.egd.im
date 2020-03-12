@@ -26,3 +26,20 @@
 {% block content %}
 	{{ article.content }}
 {% endblock %}
+
+{% block discussion %}
+{% if article.tweet %}
+            <section id="discussion">
+                <h1>Discussion</h1>
+                For comments or corrections, please join the thread on Twitter
+                <blockquote id="tweet" data-theme="light" class="twitter-tweet"><a href="{{article.tweet}}"/>{{article.tweet}}</blockquote>
+                <script>
+                // Twitter embed does not respond automatically to dark mode, and we can't set this attribute after the widget loads either.
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                  document.getElementById("tweet").setAttribute("data-theme", "dark");
+                };
+                </script>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </section>
+{% endif %}
+{% endblock %}

@@ -141,6 +141,21 @@ article pre {
     font-size: .7em;
 }
 
+/* discussion */
+section#discussion {
+    border-top: 1px solid var(--light-color);
+}
+section#discussion {
+  font-style: italic;
+  font-size: .8em;
+}
+
+section#discussion h1 {
+    font-size: 1.3em;
+    font-style: normal;
+    font-weight: 200;
+}
+
 /* footer */
 footer {
     font-size: .8em;
